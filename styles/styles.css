@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 /*////////////////////////////////////////////////////////////////////////
 Table of Contents:
     1. Global Styles
@@ -10,18 +12,63 @@ Table of Contents:
         3.5 Footer
 ////////////////////////////////////////////////////////////////////////*/
 
-
+/*Te gebruiken kleuren: grijs #899CA0 en donkergroen #1C2B32*/
 
 /*////////////////////////
     1. Global Styles
 ////////////////////////*/
+/* CSS-reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Global setup */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1C2B32;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 
 /*////////////////////////
     2. Typography
 ////////////////////////*/
+h1 {
+    font-size: 120px;
+    font-weight: 700;
+}
 
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 64px 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Omdat input en button elementen zijn die NIET standaard overerven van hun parent, moeten we hier appart vermelden dat ze de font-familiy van de body ook moeten gaan gebruiken (mits we dat zouden willen natuurlijk*/
+input, button {
+    font-family: inherit;
+}
+
+a,
+a:link,
+a:visited {
+    color: #899CA0;
+    text-decoration: underline;
+}
+
+a:hover{
+    text-decoration: none;
+}
 
 
 /*////////////////////////
@@ -31,19 +78,164 @@ Table of Contents:
 
 
 /*///////////// 3.1 Header /////////////*/
+/*voegt de foto in als achtergrondfoto van de header*/
+header {
+    background-image: url("../assets/images/mountains.jpg");
+    background-size: cover;
+    background-position: top;
+}
 
+.header-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 150px 0 400px 0;
+    text-align: center;
+}
 
+.domain-input-field {
+    margin-top: 32px;
+    padding: 24px 32px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 350px;
+    background-color: transparent;
+    border: 2px solid #1C2B32;
+    color: #1C2B32;
+    font-size: 18px;
+    outline: transparent;
+}
+
+.domain-input-field::placeholder {
+    color: #1C2B32;
+    font-size: 18px;
+}
+
+.domain-input-field:focus::placeholder {
+    color: transparent;
+}
+
+.check-button {
+    background-color: #1C2B32;
+    color: white;
+    font-size: 18px;
+    padding: 24px 32px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-left: -7px;
+    border: 2px solid #1C2B32;
+    outline: none;
+}
+
+.check-button:hover {
+    background-color: #899CA0;
+    color: #1C2B32;
+}
 
 /*///////////// 3.2 Testimonial /////////////*/
 
+.testimonial-section {
+    margin: 64px 0;
+}
 
+
+.testimonial-article {
+    position: relative;
+    padding: 64px 96px 64px 150px;
+    margin: 64px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px 2px rgba(24, 39,75,0.12),
+    0 6px 20px 4px rgba(24, 39, 75, 0.12);
+
+
+}
+
+.testimonial-article blockquote{
+    margin-bottom: 24px;
+}
+
+.quotes-image {
+    position: absolute;
+    top: 64px;
+    left: 100px;
+}
+
+.name-wrapper img {
+    width: 44px;
+    height: 44px;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+.customer-name {
+    font-style: italic;
+    display: inline;
+    margin-left: 24px;
+
+}
 
 /*///////////// 3.3 Support /////////////*/
+.support-section {
+    margin: 64px 0;
+}
 
+.support-section img {
+    width: 100%;
+    border-radius: 12px;
+}
 
+.support-section p {
+    margin: 24px 0;
+}
+
+.support-section button {
+    background-color: #1C2B32;
+    color: white;
+    padding: 24px 32px;
+    font-size: 14px;
+    border-radius: 50px;
+    border: 2px solid #1C2B32;
+    outline: none;
+}
+
+.support-section button:hover {
+    background-color: #899CA0;
+    color: #1C2B32;
+    cursor: pointer;
+}
 
 /*///////////// 3.4 Faq /////////////*/
+.faq-section {
+    margin: 64px 0;
+}
+.faq-details {
+    margin-block: 24px;
+}
 
+.faq-details p {
+    padding: 24px 32px;
+    background-color: #899CA0;
+    color: white;
+    border-radius: 12px;
+    line-height: 20px;
+}
 
+.faq-details summary {
+    margin-bottom: 10px;
+}
+
+.faq-details summary:hover {
+    cursor: pointer;
+}
 
 /*///////////// 3.5 Footer /////////////*/
+.footer {
+    padding-block: 32px;
+    background-color: black;
+}
+
+.footer p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
